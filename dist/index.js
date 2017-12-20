@@ -31,7 +31,7 @@ function PrismPlugin() {
 
     return {
         decorateNode: function decorateNode(node) {
-            if (node.kind === 'document') return document = node;
+            if (node.kind === 'document') document = node;
             if (!opts.onlyIn(node)) {
                 return undefined;
             }
