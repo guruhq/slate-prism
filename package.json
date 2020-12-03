@@ -6,7 +6,7 @@
   "repository": "git://github.com/GitbookIO/slate-prism.git",
   "main": "./dist/index.js",
   "dependencies": {
-    "prismjs": "^1.6.0"
+    "prismjs": "^1.15.0"
   },
   "peerDependencies": {
     "react": "*",
@@ -30,12 +30,12 @@
     "gh-pages": "^1.0.0",
     "http-server": "^0.10.0",
     "immutable": "^3.8.2",
+    "prismjs": "^1.15.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "slate": "^0.29.0",
-    "slate-edit-code": "0.13.0",
-    "slate-hyperscript": "^0.4.6",
-    "slate-react": "^0.10.0"
+    "slate": "^0.34.7",
+    "slate-hyperscript": "^0.5.22",
+    "slate-react": "^0.13.4"
   },
   "scripts": {
     "prepublish": "babel ./lib --out-dir ./dist",
