@@ -33,9 +33,9 @@
     "prismjs": "^1.15.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "slate": "^0.34.7",
-    "slate-hyperscript": "^0.5.22",
-    "slate-react": "^0.13.4"
+    "slate": "^0.39.3",
+    "slate-hyperscript": "^0.9.3",
+    "slate-react": "^0.17.3"
   },
   "scripts": {
     "prepublish": "babel ./lib --out-dir ./dist",
