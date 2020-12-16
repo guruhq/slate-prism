@@ -27,15 +27,13 @@ function PrismPlugin() {
     var optsParam = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     var opts = new _options2.default(optsParam);
-    var document = null;
 
     return {
         decorateNode: function decorateNode(node) {
-            if (node.kind === 'document') document = node;
             if (!opts.onlyIn(node)) {
                 return undefined;
             }
-            return _decorateNode(opts, node, document);
+            return _decorateNode(opts, node);
         },
 
         renderMark: opts.renderMark,
@@ -47,8 +45,8 @@ function PrismPlugin() {
 /**
  * Returns the decoration for a node
  */
-function _decorateNode(opts, block, document) {
-    var grammarName = opts.getSyntax(block, document);
+function _decorateNode(opts, block) {
+    var grammarName = opts.getSyntax(block);
     var grammar = _prismjs2.default.languages[grammarName];
     if (!grammar) {
         // Grammar not loaded
@@ -148,11 +146,9 @@ function createDecoration(_ref) {
     end -= textStart;
 
     return {
-        anchorKey: text.key,
-        anchorOffset: start,
-        focusKey: text.key,
-        focusOffset: end,
-        marks: [{ type: 'prism-token', data: { className: className } }]
+        anchor: { key: text.key, offset: start },
+        focus: { key: text.key, offset: end },
+        mark: { type: 'prism-token', data: { className: className } }
     };
 }
 

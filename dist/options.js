@@ -30,7 +30,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * Default filter for code blocks
  */
 function defaultOnlyIn(node) {
-    return node.kind === 'block' && node.type === 'code_block';
+    return node.object === 'block' && node.type === 'code_block';
 }
 
 /**
